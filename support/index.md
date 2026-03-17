@@ -1,6 +1,6 @@
 # QA Hub Support
 
-For support, contact: `support@example.com`
+For support, contact: `etitkov@bruin.com`
 
 When contacting support, include:
 

@@ -6,7 +6,7 @@
 
 QA Hub is a self-hosted QA platform. The Chrome extension communicates only with the backend server that you deploy and control. The extension publisher does not operate a hosted QA Hub service for extension data.
 
-For Chrome Web Store submission, publish this policy at a public HTTPS URL and keep the hosted copy aligned with this repository version. Placeholder URL: `https://your-domain.example/qahub/privacy-policy`
+This policy is published at `https://etitkovbruin.github.io/qahub-public/privacy-policy/`. Keep the hosted copy aligned with this repository version.
 
 ## Data Collection
 
@@ -62,4 +62,4 @@ Updates to this policy will be published in the repository and reflected in the 
 
 ## Contact
 
-For privacy questions, use your public support address in the published copy of this policy. The placeholder used in repository drafts is `support@example.com`.
+For privacy questions, contact `etitkov@bruin.com`.

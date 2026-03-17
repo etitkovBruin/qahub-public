@@ -5,14 +5,9 @@ QA Hub is a self-hosted QA platform. The Chrome extension connects to your own b
 ## Quick Start
 
 1. Install the QA Hub extension from your Chrome Web Store listing.
-2. Download the backend release bundle, or clone your public repository mirror:
+2. Download the backend release bundle from your published release location, or clone the public QA Hub repository that you provide for self-hosted deployments.
 
-```bash
-git clone https://github.com/your-org/qahub-extension.git
-cd qahub-extension
-```
-
-3. Copy `.env.example` to `.env` and set at least `JWT_SECRET_KEY`.
+3. Change into the extracted or cloned project directory, then copy `.env.example` to `.env` and set at least `JWT_SECRET_KEY`.
 4. Start the production stack:
 
 ```bash
