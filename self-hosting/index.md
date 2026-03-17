@@ -7,11 +7,11 @@ QA Hub is a self-hosted QA platform. The Chrome extension connects to your own b
 1. Install the QA Hub extension from your Chrome Web Store listing.
 2. Download the backend release bundle from your published release location, or clone the public QA Hub repository that you provide for self-hosted deployments.
 
-3. Change into the extracted or cloned project directory, then copy `.env.example` to `.env` and set at least `JWT_SECRET_KEY`.
+3. Change into the extracted or cloned project directory, then copy `extension-ui/self-hosting/.env.example` to `extension-ui/self-hosting/.env` and set at least `JWT_SECRET_KEY`.
 4. Start the production stack:
 
 ```bash
-docker compose -f docker-compose.prod.yml up -d
+docker compose -f extension-ui/self-hosting/docker-compose.prod.yml up -d
 ```
 
 5. Open the extension, enter your backend URL, and sign in.
@@ -20,8 +20,8 @@ docker compose -f docker-compose.prod.yml up -d
 
 Each backend release should publish:
 
-- `docker-compose.prod.yml`
-- `.env.example`
+- `extension-ui/self-hosting/docker-compose.prod.yml`
+- `extension-ui/self-hosting/.env.example`
 - `docs/self-hosting/index.md`
 - `CHANGELOG.md` (optional)
 
@@ -40,7 +40,7 @@ That allows self-hosters to deploy without cloning the full repository.
 Create your environment file:
 
 ```bash
-cp .env.example .env
+cp extension-ui/self-hosting/.env.example extension-ui/self-hosting/.env
 ```
 
 Common values:
@@ -55,7 +55,7 @@ Optional values cover TeamCity, Jira, GitHub, alert webhooks, and AI integration
 ## Run the Production Stack
 
 ```bash
-docker compose -f docker-compose.prod.yml up -d
+docker compose -f extension-ui/self-hosting/docker-compose.prod.yml up -d
 ```
 
 Verify the deployment:
@@ -86,8 +86,8 @@ qahub.yourcompany.com {
 3. Restart the stack.
 
 ```bash
-docker compose -f docker-compose.prod.yml pull
-docker compose -f docker-compose.prod.yml up -d
+docker compose -f extension-ui/self-hosting/docker-compose.prod.yml pull
+docker compose -f extension-ui/self-hosting/docker-compose.prod.yml up -d
 ```
 
 MongoDB data remains in the `mongo-data` volume across upgrades.
@@ -97,7 +97,7 @@ MongoDB data remains in the `mongo-data` volume across upgrades.
 For local development, use the source-based compose file:
 
 ```bash
-docker compose up -d
+docker compose -f extension-ui/self-hosting/docker-compose.yml up -d
 ```
 
 Or run the API directly:
